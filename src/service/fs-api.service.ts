@@ -16,7 +16,7 @@ export class FsApiService {
     private afs: AngularFirestore
   ) { }
 
-  //#region Ders
+  //#region Category
   CategoryGetir() {
     return this.afs.collection("kategoriler").snapshotChanges();
   }
@@ -34,7 +34,7 @@ export class FsApiService {
     return this.afs.collection("kategoriler").doc(id).delete();
   }
 
-  //#region Odev
+  //#region İlan
   IlanGetir() {
     return this.afs.collection("ilanlar").snapshotChanges();
   }

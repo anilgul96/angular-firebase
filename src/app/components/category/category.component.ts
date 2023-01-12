@@ -51,7 +51,7 @@ export class CategoryComponent implements OnInit {
   Ekle(el: HTMLElement) {
     this.frm.reset();
     this.modal = new bootstrap.Modal(el);
-    this.modalBaslik = "Ders Ekle";
+    this.modalBaslik = " Ekle";
     this.modal.show();
   }
   Duzenle(kategori: Category, el: HTMLElement) {
@@ -62,7 +62,7 @@ export class CategoryComponent implements OnInit {
   }
   Sil(kategori: Category, el: HTMLElement) {
     this.secCategory = kategori;
-    this.modalBaslik = "Ders Sil";
+    this.modalBaslik = " Sil";
     this.modal = new bootstrap.Modal(el);
     this.modal.show();
   }

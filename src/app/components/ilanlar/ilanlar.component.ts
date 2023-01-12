@@ -81,7 +81,7 @@ export class IlanlarComponent implements OnInit {
   }
   Sil(ilan: Ilanlar, el: HTMLElement) {
     this.secIlan = ilan;
-    this.modalBaslik = "Ders Sil";
+    this.modalBaslik = "İlan Sil";
     this.modal = new bootstrap.Modal(el);
     this.modal.show();
   }
