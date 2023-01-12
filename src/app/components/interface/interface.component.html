@@ -70,7 +70,7 @@
                                 <a [routerLink]="['/ilanDetay',ilan.id]" ><img src="{{ilan.resim}}" class="card-img-top" alt="..."></a>
                                 <div class="card-body" style="text-align: left; font-family: Arial, Helvetica, sans-serif;">
                                   <h5 style="font-weight: bold;" class="card-title">{{ilan.ilanadi}}</h5>
-                                  <p class="card-text">{{ilan.detail}}</p>
+                                  <button class="btn btn-secondary"><a [routerLink]="['/ilanDetay',ilan.id]" style="color: white; text-decoration: none;" >Detaylar</a></button>
                                 </div>
                                 <ul class="list-group list-group-flush">
                                   <li class="list-group-item">{{ilan.odasayisi}}</li>
