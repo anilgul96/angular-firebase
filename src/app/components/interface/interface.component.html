@@ -2,13 +2,13 @@
   <div id="layoutDefault_content">
       <main>
           <!-- Navbar-->
-          <nav class="navbar navbar-marketing navbar-expand-lg bg-transparent navbar-light">
+          <nav id="navbar" class="navbar navbar-marketing navbar-expand-lg navbar-light">
               <div class="container px-5 py-3">
-                  <a class="navbar-brand text-primary" href="/">Anıl Emlak</a>
+                  <a class="navbar-brand text-white" href="/">Anıl Emlak</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i data-feather="menu"></i></button>
                   <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                       
-                      <a class="btn fw-500   btn-primary" [routerLink]="['/giris']">
+                      <a class="btn fw-500   btn-light" [routerLink]="['/giris']">
                           Giriş Yap
                      
                       </a>
@@ -24,13 +24,13 @@
                               <h1 class="page-header-ui-title">Hayalinizdeki Eve Hemen<br> Şimdi Kavuşun</h1>
                               <p class="page-header-ui-text mb-5">%0 'faizli ev kredisi</p>
                               <div class="d-flex flex-column flex-sm-row">
-                                  <a class="btn btn-lg btn-primary fw-500 me-sm-3 mb-3 mb-sm-0 px-5" href="#ilanlarTab">
+                                  <a id="ilan-button" class="btn btn-lg fw-500 me-sm-3 mb-3 mb-sm-0 px-5 text-white" href="#ilanlarTab">
                                     İlanlar
                                     
                                   </a>
                               </div>
                           </div>
-                          <div class="col-lg-6 d-none d-lg-block" data-aos="fade-up" data-aos-delay="100"><img class="img-fluid" src="https://img.freepik.com/free-photo/businessman-holding-little-house_1368-6417.jpg?w=1060&t=st=1673055802~exp=1673056402~hmac=a9a914f707040928b881e692c65fa65b7c71a5983aee4d12ddfc8b807ae7e161" alt="..." /></div>
+                          <div class="col-lg-6 d-none d-lg-block" data-aos="fade-up" data-aos-delay="100"><img class="img-fluid" src="https://img.freepik.com/free-photo/observation-urban-building-business-steel_1127-2397.jpg?w=1060&t=st=1673460482~exp=1673461082~hmac=76f89654a02e82c57a465433598af80088eb65ca11469ec5192f0f2f6af41a6b" alt="..." /></div>
                       </div>
                   </div>
               </div>
@@ -57,12 +57,32 @@
                       </div>
                   </div>
                   <div id="ilanlarTab"></div>
-                  <div class="row gx-5 text-center">
+                  <!-- <div class="row gx-5 text-center">
                       <div class="col-lg-4 mb-5" *ngFor="let ilan of ilanlar">
                           <h6 class="mb-3">{{ilan.ilanadi}}</h6>
                           <a class="d-block rounded-3 lift lift-lg" [routerLink]="['/ilanDetay',ilan.id]"><img class="img-fluid w-100 rounded-3" src={{ilan.resim}} /></a>
                       </div>
+                  </div> -->
+                  <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 mb-3 " *ngFor="let ilan of ilanlar">
+                            <div class="card" style="width: 18rem;" >
+                                <a [routerLink]="['/ilanDetay',ilan.id]" ><img src="{{ilan.resim}}" class="card-img-top" alt="..."></a>
+                                <div class="card-body" style="text-align: left; font-family: Arial, Helvetica, sans-serif;">
+                                  <h5 style="font-weight: bold;" class="card-title">{{ilan.ilanadi}}</h5>
+                                  <p class="card-text">{{ilan.detail}}</p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                  <li class="list-group-item">{{ilan.odasayisi}}</li>
+                                  <li class="list-group-item">{{ilan.adres}}</li>
+                                </ul>
+                              </div>
+                              
+                        </div>
+                    </div>
                   </div>
+                  
+
               </div>
               <div class="svg-border-rounded text-white">
                   <!-- Rounded SVG Border-->

@@ -7,6 +7,7 @@ import { IlanlarComponent } from './components/ilanlar/ilanlar.component';
 import { LoginComponent } from './components/login/login.component';
 import { AuthGuard } from 'src/service/auth.guard';
 import { HomeComponent } from './components/home/home.component';
+import { KullanicilarComponent } from './components/kullanicilar/kullanicilar.component';
 
 
 const routes: Routes = [
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: "",
     component: InterfaceComponent,
+  },
+  {
+    path: "kullanicilar",
+    component: KullanicilarComponent,
   },
   {
     path: "interface",

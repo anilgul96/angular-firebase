@@ -19,6 +19,7 @@ import { AuthService } from 'src/service/auth.service';
 import { HomeComponent } from './components/home/home.component';
 import { IlanDetayComponent } from './components/ilan-detay/ilan-detay.component';
 import { InterfaceComponent } from './components/interface/interface.component';
+import { KullanicilarComponent } from './components/kullanicilar/kullanicilar.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { InterfaceComponent } from './components/interface/interface.component';
     LoginComponent,
     HomeComponent,
     InterfaceComponent,
+    KullanicilarComponent
  
     
   ],
